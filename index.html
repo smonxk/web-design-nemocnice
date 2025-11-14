@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nemocnice Glenis</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Pužitý Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Work+Sans:wght@300;400;600&display=swap"
+    />
+
+    <!-- Použité ikonky Fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/6808d428b0.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <header>
+      <a href="index.html">
+        <img
+          src="./Media/ChatGPT_Generated_logo.png"
+          class="logo"
+          alt="Logo Nemocnice Glanis"
+        />
+      </a>
+    </header>
+
+    <nav>
+      <div class="search-icon" id="search">
+        <div class="search-container" id="search-container">
+          <form id="search-form" action="vyhledavani.html">
+            <input type="text" class="search-input" id="search-input" />
+          </form>
+        </div>
+        <i class="fa-solid fa-magnifying-glass" id="search-trigger"></i>
+      </div>
+      <div class="menu-icon" id="menu-container">
+        <i class="fa-solid fa-bars" id="menu-icon"></i>
+      </div>
+      <div class="menu" id="menu">
+        <a href="index.html">Domů</a>
+        <a href="oddeleni.html">Oddělení</a>
+        <a href="rezervace.html">Rezervace</a>
+        <a href="kontakt.html">Kontakt</a>
+        <!-- <a class="login"><i class="fa-solid fa-user"></i> Přihlášení</a>  REGISTRACE/PRIHLASENI mozna implementace-->
+      </div>
+    </nav>
+
+    <main>
+      <!-- Úvod stránky -->
+      <section class="hero">
+        <div class="hero-img">
+          <img
+            src="./Media/Gemini_Generated_nemocnice.png"
+            alt="Nemocnice Glanis"
+          />
+        </div>
+
+        <div class="hero-content">
+          <h1>Vítejte v nemocnici Glanis</h1>
+          <p>
+            Moderní péče s lidským přístupem. Vaše zdraví je naší prioritou.
+          </p>
+          <a href="oddeleni.html" class="btn">Zobrazit oddělení</a>
+        </div>
+      </section>
+
+      <!-- Oddělení -->
+      <section class="departments">
+        <h2>Naše oddělení</h2>
+        <div class="department-grid">
+          <article class="department-card">
+            <img
+              src="./Media/Gemini_Generated_chirurgie.png"
+              alt="Oddělení chirurgie"
+            />
+            <div class="department-card-content">
+              <h3>Chirurgie</h3>
+              <p>
+                Špičková péče v oblasti minimálně invazivních a robotických
+                operačních výkonů.
+              </p>
+              <a href="oddeleni.html">Zobrazit více</a>
+            </div>
+          </article>
+
+          <article class="department-card">
+            <img
+              src="./Media/Gemini_Generated_ortopedie.png"
+              alt="Oddělení ortopedie"
+            />
+            <div class="department-card-content">
+              <h3>Ortopedie</h3>
+              <p>
+                Komplexní péče o pohybový aparát, od léčby sportovních úrazů až
+                po kloubní náhrady.
+              </p>
+              <a href="oddeleni.html">Zobrazit více</a>
+            </div>
+          </article>
+
+          <article class="department-card">
+            <img
+              src="./Media/Gemini_Generated_hematologie.png"
+              alt="Oddělení hematologie"
+            />
+            <div class="department-card-content">
+              <h3>Hematologie</h3>
+              <p>
+                Pokročilá diagnostika a léčba krevních onemocnění a poruch
+                krvetvorby v naší moderní laboratoři.
+              </p>
+              <a href="oddeleni.html">Zobrazit více</a>
+            </div>
+          </article>
+
+          <article class="department-card">
+            <img
+              src="./Media/Gemini_Generated_endokrinologie.png"
+              alt="Oddělení endokrinologie"
+            />
+            <div class="department-card-content">
+              <h3>Endokrinologie</h3>
+              <p>
+                Specializovaná péče o pacienty s hormonální nerovnováhou,
+                diabetem a poruchami štítné žlázy.
+              </p>
+              <a href="oddeleni.html">Zobrazit více</a>
+            </div>
+          </article>
+
+          <article class="department-card">
+            <img
+              src="./Media/Gemini_Generated_gynekologie.png"
+              alt="Oddělení gynekologie a porodnictví"
+            />
+            <div class="department-card-content">
+              <h3>Gynekologie a porodnictví</h3>
+              <p>
+                Poskytujeme citlivou péči pro ženy v každé etapě života, včetně
+                moderní a bezpečné porodnice.
+              </p>
+              <a href="oddeleni.html">Zobrazit více</a>
+            </div>
+          </article>
+
+          <article class="department-card">
+            <img
+              src="./Media/Gemini_Generated_pediatrie.png"
+              alt="Oddělení pediatrie"
+            />
+            <div class="department-card-content">
+              <h3>Pediatrie</h3>
+              <p>
+                Laskavá a komplexní péče pro děti od novorozeneckého věku až po
+                dospívání.
+              </p>
+              <a href="oddeleni.html">Zobrazit více</a>
+            </div>
+          </article>
+
+          <article class="department-card">
+            <img
+              src="./Media/Gemini_Generated_alergologie.png"
+              alt="Oddělení alergologie"
+            />
+            <div class="department-card-content">
+              <h3>Alergologie</h3>
+              <p>
+                Moderní diagnostika a účinná léčba všech typů alergií, astmatu a
+                poruch imunitního systému.
+              </p>
+              <a href="oddeleni.html">Zobrazit více</a>
+            </div>
+          </article>
+
+          <article class="department-card">
+            <img
+              src="./Media/Gemini_Generated_nefrologie.png"
+              alt="Oddělení nefrologie"
+            />
+            <div class="department-card-content">
+              <h3>Nefrologie</h3>
+              <p>
+                Odborná diagnostika, léčba a prevence všech akutních i
+                chronických onemocnění ledvin.
+              </p>
+              <a href="oddeleni.html">Zobrazit více</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Rezervace -->
+      <section class="reservation">
+        <h2>Potřebujete se objednat?</h2>
+        <p>Rezervujte si svůj termín snadno online.</p>
+        <a href="rezervace.html" class="btn btn-light">Rezervovat vyšetření</a>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-column">
+          <img
+            src="./Media/ChatGPT_Generated_logo.png"
+            alt="Logo Nemocnice Glanis"
+            class="footer-logo"
+          />
+          <p>
+            Glanisova 123, 167 67 Praha<br />
+            Tel: +420 123 456 789<br />
+            Email: info@nemocniceglanis.cz
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h3>Rychlé odkazy</h3>
+          <a href="index.html">Domů</a>
+          <a href="oddeleni.html">Oddělení</a>
+          <a href="rezervace.html">Rezervace</a>
+          <a href="kontakt.html">Kontakt</a>
+        </div>
+
+        <div class="footer-column">
+          <h3>Otevírací doba</h3>
+          <p>
+            <strong>Ambulance:</strong> Po-Pá 7:00 - 17:00<br />
+            <strong>Pohotovost:</strong> Nonstop
+          </p>
+          <div class="footer-socials">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 Nemocnice Glanis. Toto je studentský projekt.</p>
+        <p>Autoři: Hieu Nguyen, Simona Dobešová, Veronika Zacharová</p>
+      </div>
+    </footer>
+
+    <script>
+      const menuIcon = document.getElementById("menu-icon");
+      const menu = document.getElementById("menu");
+
+      menuIcon.addEventListener("click", function () {
+        menu.classList.toggle("active");
+      });
+
+      const search = document.getElementById("search");
+      const searchTrigger = document.getElementById("search-trigger");
+      const searchContainer = document.getElementById("search-container");
+      const menuContainer = document.getElementById("menu-container");
+      const searchForm = document.getElementById("search-form");
+      const searchInput = document.getElementById("search-input");
+
+      searchTrigger.addEventListener("click", function () {
+        if (searchContainer.classList.contains("active")) {
+          if (searchInput.value.length === 0) {
+            search.classList.toggle("active");
+            searchContainer.classList.toggle("active");
+            menuContainer.classList.toggle("hidden");
+          } else {
+            searchForm.submit();
+          }
+        } else {
+          if (menu.classList.contains("active")) {
+            menu.classList.toggle("active");
+          }
+          search.classList.toggle("active");
+          searchContainer.classList.toggle("active");
+          menuContainer.classList.toggle("hidden");
+          setTimeout(function () {
+            searchInput.focus();
+          }, 100);
+        }
+      });
+
+      searchForm.addEventListener("submit", function (event) {
+        if (searchInput.value.length === 0) {
+          event.preventDefault();
+        }
+      });
+    </script>
+  </body>
+</html>
