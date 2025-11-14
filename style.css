@@ -69,7 +69,7 @@ img {
 
 /* Hlavička */
 header {
-  height: 8vh;
+  height: 10vh;
   width: 100%;
   display: flex;
   align-items: center;
@@ -87,7 +87,7 @@ header {
 
 /* Navigace */
 nav {
-  height: 8vh;
+  height: 10vh;
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -166,9 +166,9 @@ nav .menu {
   display: flex;
   flex-direction: column;
   position: absolute;
-  bottom: 8vh;
+  bottom: 10vh;
   text-align: center;
-  line-height: 8vh;
+  line-height: 10vh;
   width: 100%;
   left: 0;
   background-color: var(--main-colour);
@@ -321,7 +321,7 @@ main section {
 
 /* Patička */
 footer {
-  margin-bottom: 8vh;
+  margin-bottom: 10vh;
   background-color: var(--text-colour1);
   color: var(--bg-colour);
   padding: 3rem 1.5rem 1.5rem 1.5rem;
