@@ -69,7 +69,7 @@ img {
 
 /* Hlavička */
 header {
-  height: 10vh;
+  height: 5.5rem;
   width: 100%;
   display: flex;
   align-items: center;
@@ -77,7 +77,7 @@ header {
 }
 
 .logo {
-  width: 180px;
+  width: 190px;
   transition: opacity 0.3s ease;
 }
 
@@ -87,7 +87,7 @@ header {
 
 /* Navigace */
 nav {
-  height: 10vh;
+  height: 5.5rem;
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -98,6 +98,10 @@ nav {
   font-size: 1.5rem;
   background-color: var(--main-colour);
   z-index: 2;
+}
+
+nav .nav-logo {
+  display: none;
 }
 
 nav a,
@@ -112,14 +116,13 @@ nav i:hover {
 }
 
 nav .search-input {
-  /* display: none; */
   border: none;
   outline: none;
   border-radius: 25px;
   width: 0;
   opacity: 0;
   visibility: hidden;
-  padding-left: 1rem;
+  padding: 1rem;
   font-size: 1.2rem;
   height: 2.5rem;
   color: var(--text-colour2);
@@ -140,11 +143,11 @@ nav .menu-icon {
   gap: 0.8rem;
 }
 
-nav .search-icon.active {
-  width: 100%;
+nav .search-icon {
+  flex: 1;
 }
 
-nav .search-icon.active .search-container {
+nav .search-icon .search-container {
   width: 100%;
 }
 
@@ -166,9 +169,9 @@ nav .menu {
   display: flex;
   flex-direction: column;
   position: absolute;
-  bottom: 10vh;
+  bottom: 5.5rem;
   text-align: center;
-  line-height: 10vh;
+  line-height: 5.5rem;
   width: 100%;
   left: 0;
   background-color: var(--main-colour);
@@ -183,14 +186,9 @@ nav .menu.active {
   transform: translateY(0);
 }
 
-/* MOZNA IMPLEMENTACE LOGINU/REGISTRACE
-nav .login:hover {
-  cursor: pointer;
-}*/
-
 /* Hlavní část */
 main section {
-  margin: 0 0 5vh 0;
+  margin: 0 0 4rem 0;
 }
 
 /* Úvodní sekce */
@@ -203,6 +201,7 @@ main section {
 .hero-img {
   width: 100%;
   max-height: 40vh;
+  min-height: 200px;
   overflow: hidden;
 }
 
@@ -321,7 +320,7 @@ main section {
 
 /* Patička */
 footer {
-  margin-bottom: 10vh;
+  margin-bottom: 5.5rem;
   background-color: var(--text-colour1);
   color: var(--bg-colour);
   padding: 3rem 1.5rem 1.5rem 1.5rem;
@@ -363,6 +362,10 @@ footer {
   transition: all 0.3s ease;
 }
 
+.footer-column:first-child a {
+  margin-bottom: 0;
+}
+
 .footer-column a:hover {
   opacity: 1;
   text-decoration: underline;
@@ -387,15 +390,82 @@ footer {
 }
 
 @media (min-width: 600px) {
+  nav .search-icon {
+    flex: none;
+  }
+
+  nav .search-icon .search-container {
+    width: 31rem;
+  }
+
   .department-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (min-width: 730px) {
-  .hero-img {
-    object-fit: fill;
-    object-position: bottom;
+@media (min-width: 800px) {
+  header {
+    display: none;
+  }
+
+  nav {
+    top: 0;
+    padding: 0.5rem 1.5rem;
+    font-size: 1.6rem;
+    align-items: center;
+  }
+
+  nav > div:first-child {
+    margin-right: auto;
+  }
+
+  nav .nav-logo {
+    display: flex;
+    width: 190px;
+  }
+
+  nav .menu {
+    visibility: visible;
+    transform: none;
+    position: static;
+    width: auto;
+    line-height: normal;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+    order: 2;
+    z-index: auto;
+  }
+
+  nav .search-icon {
+    order: 3;
+    padding: 0;
+    margin-left: 1rem;
+  }
+
+  nav .search-icon .search-container {
+    position: absolute;
+    width: 30vw;
+    top: 5.5rem;
+    padding: 1.5rem;
+    right: 0;
+  }
+
+  nav .search-icon .search-container.active {
+    background-color: var(--main-colour);
+  }
+
+  nav .menu-icon {
+    display: none;
+  }
+
+  main section:first-child {
+    margin-top: 5.5rem;
+  }
+
+  footer {
+    margin-bottom: 0;
   }
 
   .footer-container {
@@ -413,9 +483,27 @@ footer {
 }
 
 @media (min-width: 915px) {
+}
+
+@media (min-width: 1050px) {
+  nav .menu {
+    margin-right: -2rem;
+  }
+
+  nav .search-icon .search-container {
+    position: static;
+    width: auto;
+    top: 0;
+    padding: unset;
+  }
+
+  nav .search-icon .search-container.active {
+    margin-left: 2rem;
+  }
+
   .hero {
+    height: 89vh;
     flex-direction: row;
-    height: 60vh;
   }
 
   .hero-img {
@@ -428,15 +516,23 @@ footer {
     padding: 3rem;
     text-align: left;
   }
-}
 
-@media (min-width: 1050px) {
   .department-grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .reservation {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
 @media (min-width: 1400px) {
+  nav .search-icon .search-container.active {
+    width: 20rem;
+  }
+
   .department-grid {
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
